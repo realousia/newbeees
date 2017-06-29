@@ -14,22 +14,29 @@
 			<div class="col-sm-12">
 				<header>
 					<a href="/"><p class="title">LIFESIGNAGE</p></a>
+					{% for hc in hc_list %}
+						<div class="honeycombs">
+							<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+						</div>
+					{% endfor %}
 				</header>
 
-				{{honey.name}}
+				<div class="panel-title-f">{{honey.name}}</div>
+				<div class="date">{{honey.created_date}}</div>
+
+				<div class="content-info">{{honey.info|linebreaks}}</div>
 
 				{% for f in flower %}
-				    <a href="">
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					    <a href="{{f.link}}" target="_new"><h3 class="panel-title">{{f.name}}</h3></a>
-					  </div>
-					  <div class="panel-body">
-					  	{{f.info}}
-					    {{f.created_date}}
-					  </div>
-					</div>
-					</a>
+				    
+					<table>
+						<tr>
+							<td id="f-table">
+						    <a href="{{f.link}}" target="_new"><h3 class="flower-title">{{f.id}}  {{f.name}}</h3></a>
+						  	<span class="flower-info">{{f.info}}</span>
+						  </td>
+						</tr>
+					</table>
+					
 				{% endfor %}
 				</div>
 			</div>

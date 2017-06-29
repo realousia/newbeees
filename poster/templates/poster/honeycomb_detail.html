@@ -22,17 +22,16 @@
 					</header>
 
 					{% for hc in honey %}
-					    <a href="/{{hc.pk}}">
-						<div class="panel panel-default">
-						  <div class="panel-heading">
-						    <h3 class="panel-title">{{hc.name}}</h3></a>
-						  </div>
-						  <div class="panel-body">
-						    {{hc.info}}
-						    {{hc.created_date}}
-						  </div>
-						</div>
-						</a>
+					    
+						<table>
+						<tr>
+							<td>
+						    <a href="/{{hc.pk}}"><h3 class="panel-title">{{hc.name}}</h3></a></a>
+						    <div class="panel-info">{{hc.info}}</div>
+						  </tr>
+						</td>
+						</table>
+						
 					{% endfor %}
 					</div>
 				</div>

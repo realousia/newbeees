@@ -23,17 +23,16 @@
 
 					
 					{% for h in h_list %}
-					    <a href="/{{h.pk}}">
-						<div class="panel panel-default">
-						  <div class="panel-heading">
-						    <h3 class="panel-title">{{h.name}}</h3>
-						  </div>
-						  <div class="panel-body">
-						  	{{h.info}}
-						    {{h.created_date}}
-						  </div>
-						</div>
-						</a>
+					    
+					    <table>
+						<tr>
+							<td>
+						    <a href="/{{h.pk}}"><h3 class="panel-title">{{h.name}}</h3></a>
+						  	<div class="panel-info">{{h.info|linebreaks}}</div>
+						  </td>
+						</tr>
+						</table>
+						
 					{% endfor %}
 				</div>
 			</div>

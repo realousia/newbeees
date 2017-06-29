@@ -13,11 +13,13 @@ def index(request):
 	})
 
 def honey_list(request, pk):
+	hc_list = hc.objects.all()
 	honey = h.objects.get(pk=pk)
 	flower = honey.flowers.all()
 	return render(request, 'poster/honey_list.html', {
 		'honey': honey,
 		'flower': flower,
+		'hc_list': hc_list,
 	})
 
 def honeycomb_detail(request, honeycomb):

@@ -23,7 +23,7 @@ html, body {
 .title {
 	color:#3e3e3e;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.8em !important;
+	font-size: 3.2em !important;
 	padding-top: 44px;
 	letter-spacing: 9px;
 }
@@ -43,6 +43,56 @@ html, body {
 	margin-bottom: 18px;
 }
 
+.hcs:hover {
+	color: #77b729;
+}
+
+.panel-title-f {
+	font-size: 2.4em;
+	color: #3e3e3e;
+}
+
+.panel-title {
+	font-size: 2.4em;
+	color: #3e3e3e;
+}
+
+.panel-title:hover {
+	color: #ffcb00;
+}
+
+.flower-title {
+	display: inline-block;
+	font-size: 1.6em;
+	color: #3e3e3e;
+}
+
+.flower-title:hover {
+	color:#ffcb00;
+}
+
+.panel-info {
+	padding-top: 16px;
+	font-size: 1em;
+}
+
+.flower-info {
+	padding-left: 16px;
+	display: inline-block;
+	font-size: 1em;
+}
+
+.content-info{
+	padding-top: 32px;
+	margin-bottom: 32px;
+	font-size: 1.2em;
+}
+
+.date {
+	padding-top: 8px;
+	font-size: 0.9em;
+}
+
 .site-footer {
 	position: fixed;
 	width: 100%;
@@ -56,4 +106,25 @@ html, body {
 	text-align: center;
 	color: #fafafa;
 	font-weight: 200;
+}
+
+table {
+	border: #e5e5e5;
+	border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-width: 0.5px;
+}
+
+td {
+	padding: 16px 0px 16px 32px;
+}
+
+td > a {
+	text-decoration: none !important;
+}
+
+#f-table {
+	padding: 4px 0px 4px 32px;
 }
