@@ -8,7 +8,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'poster.views.index'),
-    url(r'^ABOUT/', 'poster.views.about'),
+    url(r'^about/', 'poster.views.about'),
     url(r'^(?P<pk>\d+)/$', 'poster.views.honey_list'),
     url(r'^(?P<honeycomb>\w+)/$', 'poster.views.honeycomb_detail'),
     url(r'^new/$', 'poster.views.new_honey'),

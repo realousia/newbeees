@@ -8,39 +8,39 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<header>
-					<p class="title">LIFESIGNAGE</p>
-					{% for hc in hc_list %}
-						<div class="honeycombs">
-							<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+	<div class="page-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<header>
+						<p class="title">LIFESIGNAGE</p>
+						{% for hc in hc_list %}
+							<div class="honeycombs">
+								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+							</div>
+						{% endfor %}
+					</header>
+
+					
+					{% for h in h_list %}
+					    <a href="/{{h.pk}}">
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+						    <h3 class="panel-title">{{h.name}}</h3>
+						  </div>
+						  <div class="panel-body">
+						  	{{h.info}}
+						    {{h.created_date}}
+						  </div>
 						</div>
+						</a>
 					{% endfor %}
-				</header>
-
-				
-				{% for h in h_list %}
-				    <a href="/{{h.pk}}">
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					    <h3 class="panel-title">{{h.name}}</h3>
-					  </div>
-					  <div class="panel-body">
-					  	{{h.info}}
-					    {{h.created_date}}
-					  </div>
-					</div>
-					</a>
-				{% endfor %}
-				
-
-				<footer>
-
-				</footer>
+				</div>
 			</div>
-		</div>
-	</div>	
+		</div>	
+	</div>
+	<div class="site-footer">
+		<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a> · Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
+	</div>
 </body>	
 </html>

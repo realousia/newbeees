@@ -2,9 +2,31 @@ a {
  	text-decoration: none !important; 
 }
 
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	padding-bottom: 128px;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -128px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
 .title {
-	color:#fca205;
+	color:#3e3e3e;
 	font-family: 'Roboto', sans-serif;
+	font-size: 1.8em !important;
+	padding-top: 44px;
+	letter-spacing: 9px;
 }
 
 .honeycombs {
@@ -14,5 +36,23 @@ a {
 }
 
 .hcs {
-	padding-right: 24px;
+	color:#333333;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-right: 32px;
+	margin-bottom: 18px;
+}
+
+.site-footer {
+	height: 128px;
+	background-color: #2e2e2e;
+}
+
+.footer-paragraph {
+	position: fixed;
+	padding-top: 48px;
+	text-align: center;
+	color: #fafafa;
+	font-weight: 200;
 }
