@@ -7,18 +7,17 @@ a {
 }
 
 html, body {
+	margin: 0;
 	height: 100%;
-	padding-bottom: 128px;
 }
 
 .page-wrap {
   min-height: 100%;
-  /* equal to footer height */
-	margin-bottom: -128px; 
+  /* equal to footer height */ 
 }
-.page-wrap:after {
-  content: "";
-  display: block;
+
+.container {
+	padding-bottom: 128px;
 }
 
 .title {
@@ -45,12 +44,14 @@ html, body {
 }
 
 .site-footer {
+	position: fixed;
+	width: 100%;
+	margin-top: -128px;
 	height: 128px;
 	background-color: #2e2e2e;
 }
 
 .footer-paragraph {
-	position: fixed;
 	padding-top: 48px;
 	text-align: center;
 	color: #fafafa;
