@@ -28,6 +28,7 @@ class Honeycomb(models.Model):
 
 class Honey(models.Model):
 		name = models.CharField(max_length=32)
+		info = models.CharField(max_length=1024, blank=True, null=True)
 		flowers = models.ManyToManyField(Flower)
 		honeycomb = models.ForeignKey(Honeycomb)
 		created_date = models.DateTimeField(default=timezone.now)

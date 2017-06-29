@@ -7,4 +7,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'poster.views.index'),
+    url(r'^new/$', 'poster.views.new_honey'),
 ]
