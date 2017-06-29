@@ -1,0 +1,18 @@
+a {
+ 	text-decoration: none !important; 
+}
+
+.title {
+	color:#fca205;
+	font-family: 'Roboto', sans-serif;
+}
+
+.honeycombs {
+	display: inline-block;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.hcs {
+	padding-right: 24px;
+}

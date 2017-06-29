@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<header>
-					<p class="title">LIFESIGNAGE</p>
+					<a href="/"><p class="title">LIFESIGNAGE</p></a>
 					{% for hc in hc_list %}
 						<div class="honeycombs">
 							<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
@@ -20,21 +20,20 @@
 					{% endfor %}
 				</header>
 
-				
-				{% for h in h_list %}
-				    <a href="/{{h.pk}}">
+				{% for hc in honey %}
+				    <a href="/{{hc.pk}}">
 					<div class="panel panel-default">
 					  <div class="panel-heading">
-					    <h3 class="panel-title">{{h.name}}</h3>
+					    <h3 class="panel-title">{{hc.name}}</h3></a>
 					  </div>
 					  <div class="panel-body">
-					  	{{h.info}}
-					    {{h.created_date}}
+					    {{hc.info}}
+					    {{hc.created_date}}
 					  </div>
 					</div>
 					</a>
 				{% endfor %}
-				
+				</div>
 
 				<footer>
 

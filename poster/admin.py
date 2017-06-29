@@ -7,8 +7,8 @@ class fAdmin(admin.ModelAdmin):
 		list_display = ('id', 'name')
 
 admin.site.register(f, fAdmin)
-admin.site.register(hc)
-admin.site.register(h)
+admin.site.register(hc, fAdmin)
+admin.site.register(h, fAdmin)
 
 
 # Register your models here.
