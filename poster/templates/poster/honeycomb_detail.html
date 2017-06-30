@@ -12,34 +12,37 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<header>
+					<div id="upleft">
 						<a href="/"><p class="title">LIFESIGNAGE</p></a>
 						{% for hc in hc_list %}
 							<div class="honeycombs">
 								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
 							</div>
 						{% endfor %}
-					</header>
+						<div class="site-footer">
+							<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a></p>
+							<p class="footer-paragraph">Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
+						</div>
+					</div>
 
-					{% for hc in honey %}
-					    
-						<table>
-						<tr>
-							<td>
-						    <a href="/{{hc.pk}}"><h3 class="panel-title">{{hc.name}}</h3></a></a>
-						    <div class="panel-info">{{hc.info}}</div>
-						  </tr>
-						</td>
-						</table>
-						
-					{% endfor %}
+					<div id="upright">
+
+						{% for hc in honey %}
+						    
+							<table>
+							<tr>
+								<td>
+							    <a href="/{{hc.pk}}"><h3 class="panel-title">{{hc.name}}</h3></a>
+							    <div class="panel-info">{{hc.info|linebreaks}}</div>
+							  </td>
+							</tr>
+							</table>
+							
+						{% endfor %}
 					</div>
 				</div>
-			</div>
-		</div>	
-	</div>
-	<div class="site-footer">
-		<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a> · Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
+			</div>		
+		</div>
 	</div>
 </body>	
 </html>

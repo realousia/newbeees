@@ -7,31 +7,51 @@ a {
 }
 
 html, body {
-	margin: 0;
-	height: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .page-wrap {
-  min-height: 100%;
-  /* equal to footer height */ 
+  height: 100%;
+  position: relative;
 }
 
 .container {
-	padding-bottom: 128px;
+	height: 100%;
+}
+
+#upleft {
+	position:fixed; 
+	top:0;
+	width: 340px;
+	height:100%;
+	float: left;
+}
+
+#upright {
+	margin-left: 340px;
+	min-height: 100%;
+	padding-top: 114px;
+}
+
+.clear {
+	clear: both;
 }
 
 .title {
 	color:#3e3e3e;
 	font-family: 'Roboto', sans-serif;
-	font-size: 3.2em !important;
+	font-size: 1.8em !important;
 	padding-top: 44px;
+	padding-bottom: 44px;
 	letter-spacing: 9px;
 }
 
 .honeycombs {
-	display: inline-block;
-	margin-top: 16px;
-	margin-bottom: 16px;
+	margin-top: 4px;
+	margin-bottom: 2px;
 }
 
 .hcs {
@@ -39,7 +59,7 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 	font-size: 1.2em;
-	padding-right: 32px;
+	padding-left: 32px;
 	margin-bottom: 18px;
 }
 
@@ -50,6 +70,7 @@ html, body {
 .panel-title-f {
 	font-size: 2.4em;
 	color: #3e3e3e;
+	padding-left: 64px;
 }
 
 .panel-title {
@@ -86,26 +107,32 @@ html, body {
 	padding-top: 32px;
 	margin-bottom: 32px;
 	font-size: 1.2em;
+	padding-left: 64px;
 }
 
 .date {
 	padding-top: 8px;
 	font-size: 0.9em;
+	padding-left: 64px;
 }
 
 .site-footer {
-	position: fixed;
-	width: 100%;
-	margin-top: -128px;
+	margin-top: 88px;
 	height: 128px;
 	background-color: #2e2e2e;
 }
 
+.footer-paragraph:first-child {
+	padding-top: 54px;
+}
+
 .footer-paragraph {
-	padding-top: 48px;
-	text-align: center;
+	padding-top: 6px;
+	padding-left: 32px;
+	text-align: left;
 	color: #fafafa;
 	font-weight: 200;
+	font-size: 0.8em;
 }
 
 table {
@@ -118,7 +145,7 @@ table {
 }
 
 td {
-	padding: 16px 0px 16px 32px;
+	padding: 16px 0px 16px 64px;
 }
 
 td > a {
@@ -126,5 +153,5 @@ td > a {
 }
 
 #f-table {
-	padding: 4px 0px 4px 32px;
+	padding: 4px 0px 4px 64px;
 }

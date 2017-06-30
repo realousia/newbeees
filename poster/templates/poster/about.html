@@ -9,25 +9,29 @@
 </head>
 <body>
 	<div class="page-wrap">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<header>
-					<a href="/"><p class="title">LIFESIGNAGE</p></a>
-					{% for hc in hc_list %}
-						<div class="honeycombs">
-							<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="upleft">
+						<a href="/"><p class="title">LIFESIGNAGE</p></a>
+						{% for hc in hc_list %}
+							<div class="honeycombs">
+								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+							</div>
+						{% endfor %}
+						<div class="site-footer">
+							<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a></p>
+							<p class="footer-paragraph">Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
 						</div>
-					{% endfor %}
-				</header>
+					</div>
+
+					<div id="upright">
 
 				about page
-			</div>
+					</div>
+				</div>
+			</div>		
 		</div>
-	</div>	
-	</div>
-	<div class="site-footer">
-		<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a> · Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
 	</div>
 </body>	
 </html>

@@ -9,43 +9,44 @@
 </head>
 <body>
 	<div class="page-wrap">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<header>
-					<a href="/"><p class="title">LIFESIGNAGE</p></a>
-					{% for hc in hc_list %}
-						<div class="honeycombs">
-							<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="upleft">
+						<a href="/"><p class="title">LIFESIGNAGE</p></a>
+						{% for hc in hc_list %}
+							<div class="honeycombs">
+								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+							</div>
+						{% endfor %}
+						<div class="site-footer">
+							<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a></p>
+							<p class="footer-paragraph">Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
 						</div>
-					{% endfor %}
-				</header>
+					</div>
 
-				<div class="panel-title-f">{{honey.name}}</div>
-				<div class="date">{{honey.created_date}}</div>
+					<div id="upright">
 
-				<div class="content-info">{{honey.info|linebreaks}}</div>
+						<div class="panel-title-f">{{honey.name}}</div>
+						<div class="date">{{honey.created_date}}</div>
+						<div class="content-info">{{honey.info|linebreaks}}</div>
 
-				{% for f in flower %}
-				    
-					<table>
-						<tr>
-							<td id="f-table">
-						    <a href="{{f.link}}" target="_new"><h3 class="flower-title">{{f.id}}  {{f.name}}</h3></a>
-						  	<span class="flower-info">{{f.info}}</span>
-						  </td>
-						</tr>
-					</table>
-					
-				{% endfor %}
+						{% for f in flower %}
+						    
+							<table>
+								<tr>
+									<td id="f-table">
+								    <a href="{{f.link}}" target="_new"><h3 class="flower-title">{{f.id}}  {{f.name}}</h3></a>
+								  	<span class="flower-info">{{f.info}}</span>
+								  </td>
+								</tr>
+							</table>
+							
+						{% endfor %}
+					</div>
 				</div>
-			</div>
+			</div>		
 		</div>
-	</div>	
-	<div class="push"></div>
-	</div>
-	<div class="site-footer">
-		<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a> · Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
 	</div>
 </body>	
 </html>
