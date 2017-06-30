@@ -13,6 +13,21 @@ html, body {
   margin: 0;
 }
 
+.endless_container {
+	margin-bottom: 64px !important;
+	margin-left: 64px !important;
+	border: solid;
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-size: 1.1em;
+}
+
+.endless_more {
+	color: #3e3e3e !important;
+	text-decoration: none !important;
+}
+
 .page-wrap {
   height: 100%;
   position: relative;

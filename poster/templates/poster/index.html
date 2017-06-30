@@ -3,6 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<title>LIFESIGNAGE | 모든 순간의 이정표</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="{% static 'css/poster.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
@@ -26,21 +27,14 @@
 					</div>
 
 					<div id="upright">
-						
-						{% for h in h_list %}
-						    
-						    <table>
-							<tr>
-								<td>
-							    <a href="/{{h.pk}}"><h3 class="panel-title">{{h.name}}</h3></a>
-							  	<div class="panel-info">{{h.info|linebreaks}}</div>
-							  </td>
-							</tr>
-							</table>
-							
-						{% endfor %}
+						{% include page_template %}
+
+						{% block js %}
+						    <script src="http://code.jquery.com/jquery-latest.js"></script>
+						    <script src="{{ STATIC_URL }}el-pagination/js/el-pagination.js"></script>
+						    <script>$.endlessPaginate({paginateOnScroll: true});</script>
+						{% endblock %}
 					</div>
-					<div class="clear"></div>
 				</div>
 			</div>		
 		</div>

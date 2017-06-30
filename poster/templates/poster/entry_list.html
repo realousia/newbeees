@@ -1,0 +1,18 @@
+{% load el_pagination_tags %}
+
+{% paginate h_list %}
+
+{% for h in h_list %}
+						    
+    <table>
+	<tr>
+		<td>
+	    <a href="/{{h.pk}}"><h3 class="panel-title">{{h.name}}</h3></a>
+	  	<div class="panel-info">{{h.info|linebreaks}}</div>
+	  </td>
+	</tr>
+	</table>
+
+{% endfor %}
+
+{% show_more '더 불러오기' %}
