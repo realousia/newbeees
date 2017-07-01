@@ -14,10 +14,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div id="upleft">
-						<a href="/"><p class="title">LIFESIGNAGE</p></a>
+						<a href="/"><img class="logo" src="{% static 'img/lifesignage_logo_r.png' %}"></a>
 						{% for hc in hc_list %}
 							<div class="honeycombs">
-								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+								<a href="/{{hc.name}}"><div class="hcs">{{hc.title}}</div></a>
 							</div>
 						{% endfor %}
 						<div class="site-footer">

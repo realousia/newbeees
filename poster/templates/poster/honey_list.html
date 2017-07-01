@@ -14,10 +14,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div id="upleft">
-						<a href="/"><p class="title">LIFESIGNAGE</p></a>
+						<a href="/"><img class="logo" src="{% static 'img/lifesignage_logo_r.png' %}"></a>
 						{% for hc in hc_list %}
 							<div class="honeycombs">
-								<a href="/{{hc.name}}"><div class="hcs">{{hc.name}}</div></a>
+								<a href="/{{hc.name}}"><div class="hcs">{{hc.title}}</div></a>
 							</div>
 						{% endfor %}
 						<div class="site-footer">
@@ -29,7 +29,7 @@
 					<div id="upright_hc">
 
 						<div class="panel-title-f">{{honey.name}}</div>
-						<div class="date">{{honey.created_date}}</div>
+						<div class="date"><span class="label label-default" style="margin-right: 8px;">{{honey.honeycomb.title}}</span>{{honey.created_date}}</div>
 						<div class="content-info">{{honey.info|linebreaks}}</div>
 
 						{% for f in flower %}

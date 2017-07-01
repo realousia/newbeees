@@ -61,18 +61,20 @@ html, body {
 	padding-top: 44px;
 }
 
+#upright_about {
+	margin-left: 340px;
+	min-height: 100%;
+	padding-top: 44px;
+}
+
 .clear {
 	clear: both;
 }
 
-.title {
-	color:#ffffff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.8em !important;
+.logo {
 	padding-top: 44px;
-	padding-left: 34px;
-	padding-bottom: 44px;
-	letter-spacing: 9px;
+	padding-left: 32px;
+	padding-bottom:44px;
 }
 
 .honeycombs {
@@ -100,7 +102,7 @@ html, body {
 }
 
 .panel-title {
-	font-size: 2.4em;
+	font-size: 1.4em;
 	color: #3e3e3e;
 }
 
@@ -191,7 +193,7 @@ table {
 }
 
 td {
-	padding: 16px 0px 16px 64px;
+	padding: 10px 0px 10px 64px;
 }
 
 td > a {
@@ -226,5 +228,26 @@ td > a {
     border-bottom-style: none;
     border-left-style: none;
     width: 540px;
+}
+
+.about-title {
+	position: fixed;
+	font-size: 1.8em;
+	color: #ffffff;
+	padding-left: 64px;
+}
+
+.about-image {
+	margin-top: -152px;
+	width:100%;
+	position: relative;
+	z-index: -10;
+}
+
+.about-content {
+	position: fixed;
+	color: #ffffff;
+	margin-top: 82px;
+	padding-left: 64px;
 }
 
