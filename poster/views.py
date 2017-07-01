@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Honeycomb as hc
 from .models import Honey as h
 from .models import Flower as f 
+from .models import Seed as s
 from el_pagination.decorators import page_template
 
 # Create your views here.

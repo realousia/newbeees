@@ -21,29 +21,53 @@
 							</div>
 						{% endfor %}
 						<div class="site-footer">
-							<p class="footer-paragraph"><a href="/about" style="color:#ffffff; text-decoration:none !important;">About</a></p>
-							<p class="footer-paragraph">Copyright © 2017 By LIFESIGNAGE. All right reserved.</p>
+							<p class="footer-paragraph"><a href="/about" style="color:#7f7f7f; text-decoration:none !important;">About</a></p>
+							<p class="footer-paragraph">Copyright © LIFESIGNAGE. All right reserved.</p>
 						</div>
 					</div>
 
-					<div id="upright">
+					<div id="upright_hc">
 
 						<div class="panel-title-f">{{honey.name}}</div>
 						<div class="date">{{honey.created_date}}</div>
 						<div class="content-info">{{honey.info|linebreaks}}</div>
 
 						{% for f in flower %}
-						    
-							<table>
+							<table id="flower-table">
 								<tr>
-									<td id="f-table">
-								    <a href="{{f.link}}" target="_new"><h3 class="flower-title">{{f.id}}  {{f.name}}</h3></a>
-								  	<span class="flower-info">{{f.info}}</span>
-								  </td>
+									  <td id="f-table">
+									    <p class="flower-title">{{f.name}}</p>
+									  	<p class="flower-info">{{f.info}}</p>
+
+									  	{% for s in f.link.all %}
+									  	<a href="{{s.link}}" target="_new">
+									  	<table id="seed-table">
+									  		<tr>
+									  			<td id="s-table">
+									  				
+								  					{% if s.selfcontent = 1 %}
+									  				<p class="seed-type"><span class="glyphicon glyphicon-link"></span></p>
+								  					{% else %}
+								  					<p class="seed-type"><span class="glyphicon glyphicon-asterisk"></span></p>
+								  					{% endif %}
+									  				<p class="seed-title">{{s.name}}</p>
+												  	<p class="seed-info" style="color:#7f7f7f; text-decoration:none !important;">{{s.info}}</p>
+									  			</td>
+									  		</tr>
+									  	</table>
+									    </a>
+									    {% endfor %}
+
+									  </td>
 								</tr>
 							</table>
 							
 						{% endfor %}
+
+						<div class="honey_recommend">
+
+						</div> 
+
 					</div>
 				</div>
 			</div>		

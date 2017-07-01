@@ -3,10 +3,21 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Flower(models.Model):	
+class Seed(models.Model):
 		name = models.CharField(max_length=32)
 		info = models.CharField(max_length=128)
-		link = models.TextField()
+		link = models.TextField(blank=True, null=True)
+		selfcontent = models.IntegerField(default=1)
+		created_date = models.DateTimeField(default=timezone.now)
+		published_date = models.DateTimeField(blank=True, null=True)
+
+		def __str__(self):
+				return self.name
+
+class Flower(models.Model):	
+		name = models.CharField(max_length=256)
+		info = models.TextField(blank=True, null=True)
+		link = models.ManyToManyField(Seed)
 		created_date = models.DateTimeField(default=timezone.now)
 		published_date = models.DateTimeField(blank=True, null=True)
 
@@ -28,7 +39,7 @@ class Honeycomb(models.Model):
 
 class Honey(models.Model):
 		name = models.CharField(max_length=32)
-		info = models.CharField(max_length=1024, blank=True, null=True)
+		info = models.TextField(blank=True, null=True)
 		flowers = models.ManyToManyField(Flower)
 		honeycomb = models.ForeignKey(Honeycomb)
 		created_date = models.DateTimeField(default=timezone.now)
